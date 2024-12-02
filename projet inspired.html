@@ -1,0 +1,417 @@
+
+<!-- saved from url=(0069)file:///C:/Users/CHAMA/OneDrive/Desktop/Nouveau%20dossier/PROJET.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><header>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet"  href="projet inspired.html">
+    <style type="text/css">
+        {
+            text-decoration: none;
+        }
+        .navbar{
+            background: #f2f3f4   ;font-family: Times, Times New Roman; padding-right: 15px; padding-left: 15px;
+            
+        }
+        .navdiv{
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo{
+            align-self: center;
+        }
+        button{
+            background-color:#674a44 ;margin-left: 8px ;border-radius: 8px; padding: 8px; width: 70px;
+        }
+        
+        button a{
+            color: white; font-weight: bold; font-size: 10px;
+        }
+    </style>
+</header>
+<body>
+<nav class="navbar">
+    <div class="navdiv">
+    <div class="logo"><img src="LOGO.png" width="50" height="40">   
+
+</div>
+<ul>
+        <button><a href="PROJET.html">Accueil</a></button>
+        <button><a href="projet inspired.html">Compte</a></button>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function goToSecondPage() {
+
+    alert("Inscription réussie !");
+    
+    window.location.href = "formulaire.html"; 
+}
+</script>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style>
+       
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+        }
+
+       
+
+        main {
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #d4efdf;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #674a44; 
+            color: white; 
+            padding: 3px 2px;
+            border: none;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .button:hover {
+            background-color: #4f3830; 
+        }
+
+        .form-container {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f2f3f4 ;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 3px;
+            margin: 5px 0;
+            border: 1px solid #674a44;
+            border-radius: 5px;
+        }
+
+        .contact-section {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .contact-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-section ul li {
+            margin: 5px 0;
+        }
+
+        .comment-section {
+            margin-top: 20px;
+             text-align: left;
+        }
+
+       textarea {
+    width: 400px; 
+    height: 120px; 
+    margin: 5px 0; 
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #674a44;
+    text-align: left; 
+    resize: none;
+    display: block;
+    margin-left: 0; 
+}
+
+
+    </style>
+    <script>
+        
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+        }
+
+       
+        function getCookie(name) {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.startsWith(`${name}=`)) {
+                    return cookie.substring(name.length + 1);
+                }
+            }
+            return "";
+        }
+
+       
+        function personalizePage() {
+            let userName = getCookie("userName");
+            if (!userName) {
+                userName = prompt("Bienvenue ! Quel est votre nom ?");
+                if (userName) {
+                    setCookie("userName", userName, 30);
+                }
+            }
+            if (userName) {
+                document.getElementById("welcome-message").textContent = `Bienvenue, ${userName} !`;
+            }
+        }
+
+        
+        function submitComment() {
+            const comment = document.getElementById("comment").value;
+            if (comment) {
+                alert("Merci pour votre commentaire !");
+                document.getElementById("comment").value = "";
+            } else {
+                alert("Veuillez entrer un commentaire.");
+            }
+        }
+    </script>
+</head>
+<body onload="personalizePage()">
+    <header>
+       
+        <h2 id="welcome-message">Bienvenue sur notre site web !</h2>
+    </header>
+
+    <main>
+        <h1>Explorez nos cours et ressources</h1>
+        <div class="form-container">
+            <h2>Inscrivez-vous</h2>
+            <form onsubmit="alert('Inscription réussie !'); return false;">
+                <input type="text" id="name" placeholder="Votre nom complet" required>
+                <input type="email" id="email" placeholder="Votre email" required>
+                <button type="submit" class="button">S'inscrire</button>
+            </form>
+        </div>
+
+        
+
+        
+    
+</body>
+</html>
+
+
+
+
+
+
+<script type="text/javascript">
+function goToThirdPage() {
+   
+    alert("Formulaire soumis avec succès !");
+    
+    window.location.href = "merci.html"; 
+}
+</script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Étudiant</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f2f3f4 ;
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f2f3f4 ;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h3 {
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #674a44;
+            border-radius: 5px;
+        }
+        .form-container .button {
+            margin-top: 20px;
+            background-color: #674a44;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container .button:hover {
+            background-color: #4f3830;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Complétez vos informations</h2>
+        <form action="merci.html" method="post">
+            <label for="educational-level">Niveau Éducatif</label>
+            <select id="educational-level" name="educational-level" required>
+                <option value="">-- Sélectionnez --</option>
+                <option value="licence">Licence</option>
+                <option value="master">Master</option>
+                <option value="dut">DUT</option>
+                <option value="bts">BTS</option>
+                <option value="deug">DEUG</option>
+                 <option value="CI">Cycle d'ingenieur</option>
+                <option value="autre">Autre</option>
+            </select>
+
+            <label for="current-level">Niveau Actuel</label>
+            <select id="current-level" name="current-level" required>
+                <option value="">-- Sélectionnez --</option>
+                <option value="s1">S1</option>
+                <option value="s2">S2</option>
+                <option value="s3">S3</option>
+                <option value="s4">S4</option>
+                <option value="s5">S5</option>
+                <option value="s6">S6</option>
+                <option value="s7">S7</option>
+                <option value="s8">S8</option>
+                <option value="s9">S9</option>
+                <option value="s10">S10</option>
+            </select>
+
+            <label for="objectives">Objectifs Pédagogiques</label>
+            <textarea id="objectives" name="objectives" placeholder="Décrivez vos objectifs..." required></textarea>
+
+            <label for="skills">Compétences Actuelles</label>
+            <textarea id="skills" name="skills" placeholder="Décrivez vos compétences actuelles..." required></textarea>
+            <label for="cv">Télécharger votre CV</label>
+<input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+
+            <button type="submit" class="button">Soumettre</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+            margin: 0;
+            padding: 50px;
+        }
+        h1 {
+            color: #674a44;
+        }
+    </style>
+</head>
+<body>
+    <h1>Merci pour votre inscription !</h1>
+    <h2>Votre formulaire a été soumis avec succès. </h2>
+</body>
+</html>
+<div class="comment-section" >
+            <h3>Laissez un commentaire</h3>
+            <textarea id="comment" placeholder="Votre commentaire ici..."></textarea>
+            <button class="button" onclick="submitComment()">Soumettre</button>
+        </div>
+    </main>
+
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <h2>Contactez-nous</h2>
+        <p>
+            Adresse :  Agadir, Maroc<br>
+            Téléphone : 0611647777<br>
+            Email : <a href="mailto:chamarochd0@gmail.com">contact@exemple.com</a>
+        </p>
+        <ul class="footer-links">
+            <li><a href="PROJET.html">Accueil</a></li>
+            <li><a href="page1.html">Tec, Droit et Entrepreunariat</a></li>
+            <li><a href="Page3.html">Energies renouvelables</a></li>
+            <li><a href="Page4.html">Be InspirED!</a></li>
+            <li><a href="page2.html">Mécanique</a></li>
+            <li><a href="page6.html">Transfert de chaleur et de masse</a></li>
+            <li><a href="page7.html">Thermodynamique</a></li>
+             <li><a href="page 5.html">TPs PFE et Stages</a></li>
+         <li>
+           <br>
+        <p>&copy; 2024 Site Éducatif - Tous droits réservés.</p>
+    
+
+
+    </ul>
+</nav>
+
+
+        </ul>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
